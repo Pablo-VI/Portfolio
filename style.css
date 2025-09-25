@@ -1,0 +1,339 @@
+/* Reset de scroll y fuente */
+body {
+  scroll-behavior: smooth;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* HERO */
+.hero {
+  height: 645px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--hero-bg);
+  color: var(--hero-text);
+}
+
+.project-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* BOTONES */
+.btn-theme {
+  border: none;
+  background-color: var(--btn-theme-bg);
+  color: var(--btn-theme-color);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+
+.btn-theme:hover {
+  background-color: var(--btn-theme-hover-bg);
+}
+
+.btn-lang {
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.btn-lang img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+/* NAVBAR */
+#main-navbar {
+  background-color: var(--navbar-bg) !important;
+  width: 100%;
+  /*   height: 56px; 
+ */
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 20;
+}
+
+/* Container full width y padding */
+#main-navbar > .container {
+  max-width: 100%;
+  padding-left: 19px;
+  padding-right: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+}
+
+/* Logo alineado verticalmente */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/* Botones centrados */
+.center-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 90px; /* 45px cada botón */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+/* Lista de navegación horizontal */
+#navbarNav .navbar-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  margin: 0; /* evitar que aumente altura */
+  padding: 0;
+}
+
+.nav-link {
+  color: var(--navbar-text) !important;
+}
+
+.nav-link:hover {
+  color: var(--navbar-hover) !important;
+}
+
+/* Ocultar menú en pantallas pequeñas */
+@media (max-width: 860px) {
+  #navbarNav {
+    display: none !important;
+  }
+
+  /* Botones centrados se pueden mover a siguiente línea si hace falta */
+  .center-buttons {
+    position: static;
+    transform: none;
+    justify-content: center;
+    margin: 0; /* eliminar márgenes extra */
+  }
+}
+
+/* SECCIONES */
+section {
+  background-color: var(--bg-section);
+  color: var(--text-section);
+}
+
+:root[data-bs-theme="light"] {
+  /* Fondo hero */
+  --hero-bg: linear-gradient(
+    135deg,
+    #a8d5ba,
+    #7fb5e8
+  ); /* verde agua + azul suave */
+  --hero-text: #1f1f1f; /* gris oscuro, no negro absoluto */
+
+  /* Body */
+  --bs-body-bg: #f8f9fa; /* gris muy claro */
+  --bs-body-color: #1f1f1f;
+
+  /* Primary / Links / Hover */
+  --bs-primary: #0d6efd; /* azul vivo para enlaces y botones */
+
+  /* Navbar */
+  --navbar-bg: #f1f2f4; /* gris suave */
+  --navbar-text: #1f1f1f;
+  --navbar-hover: #0d6efd;
+
+  /* Secciones */
+  --bg-section: #d5ebff;
+  --text-section: #1f1f1f;
+
+  /* Botones */
+  --btn-theme-bg: #e2e4e8; /* gris suave */
+  --btn-theme-color: #1f1f1f;
+  --btn-theme-hover-bg: #d0d3d7; /* gris ligeramente más oscuro al hover */
+
+  /* Android */
+  --android-icon: #82bc00;
+}
+
+:root[data-bs-theme="dark"] {
+  /* Fondo hero */
+  --hero-bg: linear-gradient(
+    135deg,
+    #2a2d34,
+    #3c2f3e
+  ); /* gris oscuro + violeta sutil */
+  --hero-text: #ede5e5; /* gris claro, evita blanco puro */
+
+  /* Body */
+  --bs-body-bg: #171738; /* gris muy oscuro, cómodo para ojos */
+  --bs-body-color: #ede5e5;
+
+  /* Primary / Links / Hover */
+  --bs-primary: #7a5af8; /* violeta suave elegante */
+
+  /* Navbar */
+  --navbar-bg: #1f2125; /* gris oscuro */
+  --navbar-text: #ede5e5;
+  --navbar-hover: #7a5af8;
+
+  /* Secciones */
+  --bg-section: #313848;
+  --text-section: #ede5e5;
+
+  /* Botones */
+  --btn-theme-bg: #2b2e34; /* gris oscuro para botones */
+  --btn-theme-color: #ede5e5;
+  --btn-theme-hover-bg: #3a3d45; /* un poco más claro al hover */
+
+  /* Android */
+  --android-icon: #82bc00;
+}
+
+.android-icon {
+  color: var(--android-icon) !important;
+}
+
+#profile-photo {
+  max-width: 70% !important;
+}
+
+.form-control::placeholder {
+  color: #bbbbbb !important; /* Color gris para el placeholder */
+}
+
+/* SKILL COROUSEL */
+.skills-carousel {
+  overflow: hidden;
+  width: 100%;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.skills-track {
+  display: flex;
+  gap: 2rem;
+  animation: scroll 20s linear infinite;
+  width: max-content;
+}
+
+.skills-card {
+  flex: 0 0 auto;
+  min-width: 160px;
+  background: var(--bg-section);
+  border-radius: 0.5rem;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  color: var(--text-section);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.skills-inner {
+  transition: transform 0.3s ease;
+}
+
+.skills-inner:hover {
+  transform: scale(1.08);
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Animación de borde para project-cards */
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.animated-border {
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  overflow: hidden; /* evita que el glow se desborde */
+}
+
+.animated-border::after,
+.animated-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 3px;
+  border-radius: 3px;
+  background-image: conic-gradient(
+    from var(--angle),
+    #00b3bc 0deg,
+    #82bc00 40deg,
+    transparent 20deg,
+    transparent 360deg
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+  animation: spin 3s linear infinite;
+}
+
+.animated-border::before {
+  filter: blur(1.5rem);
+  opacity: 0.6;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+.animated-border {
+  overflow: hidden; /* importante para que la imagen recortada no desborde */
+}
+
+.animated-border .card-img-top {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transform: scale(0.98);
+  transform-origin: center center;
+  margin: 0 auto;
+  border-radius: 3px;
+  transition: transform 200ms ease;
+  margin-top: 0.1px;
+}
+
+/* Si quieres que al hover la imagen vuelva a su tamaño (efecto pop) */
+.animated-border .card-img-top:hover {
+  transform: scale(1);
+}
+
+/* responsivo: réduire escala en móviles */
+@media (max-width: 576px) {
+  .animated-border .card-img-top {
+    transform: scale(0.98);
+    height: 160px;
+  }
+}

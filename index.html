@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pablo Almellones Ramos</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Animations -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <!-- NAVBAR -->
+      <nav class="navbar fixed-top" id="main-navbar">
+        <div
+          class="container-fluid d-flex align-items-center justify-content-between"
+        >
+          <!-- Logo -->
+          <a class="navbar-brand" href="#" id="logo">Pablo Almellones Ramos</a>
+
+          <!-- Botones centrados -->
+          <div class="center-buttons">
+            <button id="theme-toggle" class="btn btn-theme">
+              <i class="bi bi-sun-fill" id="theme-icon"></i>
+            </button>
+            <button id="lang-toggle" class="btn btn-lang p-0">
+              <img
+                id="lang-icon"
+                src="assets/images/spain.png"
+                width="30"
+                height="30"
+              />
+            </button>
+          </div>
+
+          <!-- Menú visible solo en pantallas grandes -->
+          <div class="d-none d-md-flex" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+              <li class="nav-item">
+                <a class="nav-link" href="#about">Sobre mí</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#projects">Proyectos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#skills">Habilidades</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="home">
+        <div data-aos="fade-up">
+          <h1 class="display-3 fw-bold">Hola, soy Pablo 👋</h1>
+          <p class="lead">
+            Desarrollador Full Stack con Java, Spring Boot y Angular
+          </p>
+          <a href="#projects" class="btn btn-light btn-lg m-2">Ver proyectos</a>
+          <a
+            href="cv.pdf"
+            class="btn btn-outline-light btn-lg m-2"
+            target="_blank"
+            >Descargar CV</a
+          >
+        </div>
+      </section>
+
+      <!-- SOBRE MÍ -->
+      <section id="about" class="py-5">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-4 text-center" data-aos="fade-right">
+              <img
+                id="profile-photo"
+                src="assets/images/photo.png"
+                alt="Foto de Pablo"
+                class="rounded-circle img-fluid shadow"
+              />
+            </div>
+            <div class="col-md-8" data-aos="fade-left">
+              <h2>Sobre mí</h2>
+              <p>
+                Soy un programador apasionado por crear aplicaciones web
+                escalables y bien diseñadas. Trabajo principalmente con
+                <b>Java, Spring Boot, Angular y MySQL</b>, y me gusta aprender
+                nuevas tecnologías para mejorar mis proyectos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROYECTOS -->
+      <section id="projects" class="py-5">
+        <div class="container">
+          <h2 class="text-center mb-5">Proyectos</h2>
+          <div class="row g-4">
+            <!-- Proyecto 1 -->
+            <div class="col-md-4" data-aos="zoom-in">
+              <!--             <div class="card project-card shadow">
+ -->
+              <div class="card project-card animated-border">
+                <img
+                  src="https://picsum.photos/1200/500?random=233"
+                  class="card-img-top"
+                  alt="Proyecto 1"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Vibestify</h5>
+                  <p class="card-text">
+                    App conectada a Spotify con Spring Boot y OAuth2 para
+                    gestión de playlists personalizadas.
+                  </p>
+                  <a
+                    href="https://github.com/tuusuario/proyecto1"
+                    class="btn btn-primary"
+                    target="_blank"
+                    >Ver código</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Proyecto 2 -->
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+              <!--             <div class="card project-card shadow">
+ -->
+              <div class="card project-card animated-border">
+                <img
+                  src="https://picsum.photos/1200/500?random=85"
+                  class="card-img-top"
+                  alt="Proyecto 2"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Gestor de Partes</h5>
+                  <p class="card-text">
+                    Aplicación en JSP/Servlets y MySQL para gestión de clientes,
+                    partes de trabajo y reportes.
+                  </p>
+                  <a
+                    href="https://github.com/tuusuario/proyecto2"
+                    class="btn btn-primary"
+                    target="_blank"
+                    >Ver código</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Proyecto 3 -->
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="400">
+              <!--             <div class="card project-card shadow">
+ -->
+              <div class="card project-card animated-border">
+                <img
+                  src="https://picsum.photos/1200/500?random=1780"
+                  class="card-img-top"
+                  alt="Proyecto 3"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Portfolio</h5>
+                  <p class="card-text">
+                    Este mismo portfolio hecho con HTML, CSS y Bootstrap, con
+                    animaciones y diseño responsive.
+                  </p>
+                  <a href="#" class="btn btn-primary">Ver online</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HABILIDADES -->
+      <section id="skills" class="py-5">
+        <div class="container">
+          <h2 class="text-center mb-5">Habilidades</h2>
+          <div class="skills-carousel">
+            <div class="skills-track">
+              <!-- Cada card -->
+              <div class="skills-card" data-aos="flip-left">
+                <div class="skills-inner">
+                  <i class="bi bi-code-slash fs-1 text-primary"></i>
+                  <p>Java / Spring Boot</p>
+                </div>
+              </div>
+              <div
+                class="skills-card"
+                data-aos="flip-left"
+                data-aos-delay="200"
+              >
+                <div class="skills-inner">
+                  <i class="bi bi-window-stack fs-1 text-success"></i>
+                  <p>HTML / CSS / JS / Bootstrap</p>
+                </div>
+              </div>
+              <div
+                class="skills-card"
+                data-aos="flip-left"
+                data-aos-delay="400"
+              >
+                <div class="skills-inner">
+                  <i class="bi bi-database fs-1 text-warning"></i>
+                  <p>MySQL / SQL</p>
+                </div>
+              </div>
+              <div
+                class="skills-card"
+                data-aos="flip-left"
+                data-aos-delay="600"
+              >
+                <div class="skills-inner">
+                  <i class="bi bi-android fs-1 android-icon"></i>
+                  <p>Android</p>
+                </div>
+              </div>
+              <div
+                class="skills-card"
+                data-aos="flip-left"
+                data-aos-delay="800"
+              >
+                <div class="skills-inner">
+                  <i class="bi bi-git fs-1 text-danger"></i>
+                  <p>Git / GitHub</p>
+                </div>
+              </div>
+
+              <!-- Copia para efecto infinito -->
+              <div class="skills-card" data-aos="flip-left">
+                <div class="skills-inner">
+                  <i class="bi bi-code-slash fs-1 text-primary"></i>
+                  <p>Java / Spring Boot</p>
+                </div>
+              </div>
+              <div
+                class="skills-card"
+                data-aos="flip-left"
+                data-aos-delay="200"
+              >
+                <div class="skills-inner">
+                  <i class="bi bi-window-stack fs-1 text-success"></i>
+                  <p>HTML / CSS / JS / Bootstrap</p>
+                </div>
+              </div>
+              <div
+                class="skills-card"
+                data-aos="flip-left"
+                data-aos-delay="400"
+              >
+                <div class="skills-inner">
+                  <i class="bi bi-database fs-1 text-warning"></i>
+                  <p>MySQL / SQL</p>
+                </div>
+              </div>
+              <div
+                class="skills-card"
+                data-aos="flip-left"
+                data-aos-delay="600"
+              >
+                <div class="skills-inner">
+                  <i class="bi bi-android fs-1 android-icon"></i>
+                  <p>Android</p>
+                </div>
+              </div>
+              <div
+                class="skills-card"
+                data-aos="flip-left"
+                data-aos-delay="800"
+              >
+                <div class="skills-inner">
+                  <i class="bi bi-git fs-1 text-danger"></i>
+                  <p>Git / GitHub</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACTO -->
+      <section id="contact" class="py-5 bg-dark text-white">
+        <div class="container">
+          <h2 class="text-center mb-4">Contacto</h2>
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+              <form action="https://api.web3forms.com/submit" method="POST">
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value="c77058ac-4f22-4905-aa9d-7e0f8b0e7a68"
+                />
+
+                <div class="mb-3">
+                  <label class="form-label">Nombre</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="nombre"
+                    placeholder="Tu nombre"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    placeholder="Correo de contacto"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Mensaje</label>
+                  <textarea
+                    class="form-control"
+                    placeholder="Escribe tu mensaje"
+                    name="mensaje"
+                    rows="4"
+                    required
+                  ></textarea>
+                </div>
+                <button class="btn btn-primary w-100">Enviar</button>
+              </form>
+              <div class="text-center mt-4">
+                <a
+                  href="mailto:pabloalmellones@gmail.com"
+                  class="text-white me-3"
+                  ><i class="bi bi-envelope-fill fs-3"></i
+                ></a>
+                <a
+                  href="https://github.com/Pablo-VI"
+                  target="_blank"
+                  class="text-white me-3"
+                  ><i class="bi bi-github fs-3"></i
+                ></a>
+                <a
+                  href="https://linkedin.com/in/pabloalmellones"
+                  target="_blank"
+                  class="text-white"
+                  ><i class="bi bi-linkedin fs-3"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-center text-white py-3">
+      <p class="mb-0">
+        © 2025 Pablo Almellones Ramos | Todos los derechos reservados
+      </p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1000, once: true });
+    </script>
+  </body>
+</html>
